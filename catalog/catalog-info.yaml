@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tanzu-accelerator-go-hellodb-main
+  description: Tanzu does Go too!
+  tags:
+  - go
+  annotations:
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=tanzu-accelerator-go-hellodb-main'
+spec:
+  type: service
+  lifecycle: dev
+  owner: uki-tanzu-se-org
+  system: demo
+  dependsOn:
+  - "component:default/db-pgsql-bitnami"
